@@ -52,7 +52,7 @@ There is "log.txt"  file which keeps track of recent file operations on disk. If
 For testing, we check if there is no error in the "log.txt" for the particular operation then we can proceed for testing-  
 -We test if two files copy into/from disk properly or not. 
 -For delete operation we can test by  searching for that file after "delete operation" and if file is found that means deletion is not done properly otherwise file got deleted properly.
-If testing result is successful , we write -1 at last of operation in the "test_result" file. Otherwise we write 1 in the last of the operation in "test_result"
+If testing result is unsuccessful , we write -1 at last of operation in the "test_result" file. Otherwise we write 1 in the last of the operation in "test_result"
 
 There is one problem in this approach as I am testing  after all operations done.The file which gets deleted, we don't have that file in the  disk now. So I have not tested operations related to that file in the disk. And I have written -1 in case of such files in the "test_result". This problem can be solved if we test as soon as operation is performed .
 
